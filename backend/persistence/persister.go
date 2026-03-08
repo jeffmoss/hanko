@@ -91,6 +91,9 @@ func New(config config.Database) (Storage, error) {
 	}
 	if len(config.Url) > 0 {
 		connectionDetails.URL = config.Url
+		if len(config.Dialect) > 0 {
+			connectionDetails.Dialect = config.Dialect
+		}
 	} else {
 		connectionDetails.Dialect = config.Dialect
 		connectionDetails.Database = config.Database
