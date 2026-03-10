@@ -1,0 +1,3 @@
+ALTER TABLE passcodes ALTER COLUMN user_id DROP NOT NULL;
+ALTER TABLE passcodes ADD COLUMN flow_id UUID;
+ALTER TABLE passcodes ADD CONSTRAINT passcodes_flows_id_fk FOREIGN KEY (flow_id) REFERENCES flows (id) ON UPDATE CASCADE ON DELETE CASCADE;

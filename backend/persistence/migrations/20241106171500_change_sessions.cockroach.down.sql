@@ -1,0 +1,2 @@
+ALTER TABLE sessions ALTER COLUMN user_agent SET NOT NULL;
+ALTER TABLE sessions ALTER COLUMN ip_address SET NOT NULL;
